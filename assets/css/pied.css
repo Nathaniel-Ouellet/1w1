@@ -1,0 +1,110 @@
+.pied {
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+    position: static;
+    vertical-align: bottom;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    height: fit-content;
+    width: 100%;
+    background-color: rgba(39, 39, 39, 0.8);
+}
+.pied__foreground{
+    display: flex;
+    flex-wrap: wrap;
+    color: #fff;
+    position: relative;
+    vertical-align: bottom;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    min-height: 30px;
+    height: fit-content;
+    max-width: 1100px;
+    width: 100%;
+    column-gap: 50px;
+    z-index: 3;
+}
+.pied__section{
+    flex-direction: column;
+    width: min-content;
+    height: 150px;
+    flex: 2 2 250px;
+    padding: 0 15px;
+    margin: 0;
+    vertical-align: top;
+    position: relative;
+    z-index: 3;
+}
+.pied__h2{
+    display: flex;
+    width: 100%;
+    text-wrap: nowrap;
+    justify-content: space-between;
+    font-size: 18px;
+    margin: 0;
+    padding: 10px 0 7px 0;
+}
+.pied__retour{
+    display: inline;
+    width: 100%;
+    text-align: center;
+    text-wrap: nowrap;
+    font-size: 18px;
+    color: #4f78ffaa;
+}
+.pied__liens{
+    display: block;
+    width: max-content;
+    flex-wrap: wrap;
+}
+.pied__lien{
+    display: block;
+    padding: 3px 0 3px 0;
+    color: #cbe45b;
+    text-decoration: none;
+}
+.pied__lien:hover{
+    text-decoration: underline;
+}
+.pied__p{
+    display: block;
+    margin: 0;
+}
+.pied__liste{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    line-height: 150%;
+}
+.pied__sociaux {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 5px;
+    padding: 10px;
+    width: 100%;
+    flex: 2 2 250px;
+    height: fit-content;
+    justify-content: center;
+}
+.pied__sociaux > div{
+    display: flex;
+    width: 400px;
+    justify-content: space-between;
+}
+.pied__sociaux > div > img{
+    display: inline-block;
+    width: min-content;
+    margin: 0 4px;
+}
+.pied__tos{
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-wrap-mode: nowrap;
+    color: #4f78ffaa;
+}

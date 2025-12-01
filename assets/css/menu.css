@@ -1,0 +1,55 @@
+.entete__nav{
+    display: flex;
+    position: fixed;
+    transform: translateX(110%);
+    transition: transform 125ms;
+    top: 60px;
+    right: 20px;
+    max-width: 500px;
+    flex-flow: column;
+    text-align: right;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+}
+.entete__nav a {
+    text-decoration: none;
+    padding: 10px;
+    color: rgb(0, 153, 255);
+    transition: background-color 200ms;
+}
+.entete__nav a:hover{
+    background-color: rgba(255, 255, 255, 0.2);
+    text-decoration: underline;
+}
+
+.checkbox-burger{
+    display: none;
+}
+
+.burger-open{
+    display: none;
+}
+
+.burger-closed{
+    display: flex;
+}
+
+#chk-burger:checked ~ .entete__nav{
+    transform: translateX(0%);
+}
+
+#chk-burger:checked ~ .burger-closed{
+    display: none;
+}
+
+#chk-burger:checked ~ .burger-open{
+    display: flex;
+}
+
+.navigation__bouton > img{
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+}

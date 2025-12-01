@@ -1,0 +1,206 @@
+*{
+    box-sizing: border-box;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+    scroll-behavior: smooth;
+    font-size: 14px;
+    font-family: 'Nunito Sans';
+}
+body{
+    min-height: 100%;
+    background-color: #000000;
+}
+
+h1,h2,h3 {
+    margin: 0;
+}
+h1{
+    margin: 0;
+    padding: 20px;
+    font-size: clamp(2.571rem, 8vw + 0.286rem, 6.571rem);
+    text-align: center;
+    font-family: 'Roboto Condensed';
+}
+h2{
+    margin: 0;
+    padding: 20px 0;
+    font-size: clamp(2.286rem, 2.286vw + 1.633rem, 3.429rem);
+    font-family: 'Outfit';
+}
+h3{
+    font-size: clamp(1.714rem, 1.714vw + 1.224rem, 2.571rem);
+}
+.credit{
+    font-size: 16px;
+    line-height: 1em;
+    font-weight: 400;
+    color: #00000088;
+    text-align: center;
+}
+.description{
+    text-align: center;
+    font-size: clamp(14px, calc(11.714px + 0.571vw), 18px);
+    margin-top: 15px;
+}
+
+.sujet__nav{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: auto;
+}
+.sujet__bouton{
+    display: flex;
+    padding: 15px 15px 15px 135px;
+    margin: 0 auto;
+    width: clamp(350px, calc(283.333px + 16.667vw), 400px);
+    height: 75px;
+    font-size: 24px;
+    justify-content: right;
+    text-align: right;
+    align-items: center;
+    background: linear-gradient(to left, #000000, #000000, #00000033) 0 0 no-repeat, url('../images/montreal.jpg') 0 0 no-repeat;
+    background-size: cover;
+    color: #e0f0ff;
+    border-radius: 25px;
+    font-family: 'Outfit';
+    box-shadow: 0;
+    transition: box-shadow 200ms;
+}
+.sujet__bouton:hover{
+    box-shadow: 0 0 0 5px #0055aa;
+}
+.sujet__un{
+    background: linear-gradient(to left, #000000, #000000, #00000033) 0 0 no-repeat, url('../images/Voyager2_Bouton.jpg') center no-repeat;
+    background-size: cover;
+}
+.sujet__deux{
+    background: linear-gradient(to left, #000000, #000000, #00000033) 0 0 no-repeat, url('../images/night-vale-bouton.webp') center no-repeat;
+    background-size: cover;
+}
+.sujet__trois{
+    background: linear-gradient(to left, #000000, #000000, #00000033) 0 0 no-repeat, url('../images/Montreal-birdseye-view.webp') 0 0 no-repeat;
+    background-size: cover;
+}
+.sujet__quatre{
+    background: linear-gradient(to left, #000000, #000000, #00000033) 0 0 no-repeat, url('../images/montreal.jpg') 0 0 no-repeat;
+    background-size: cover;
+}
+.sujet__cinq{
+    background: linear-gradient(to left, #000000, #000000, #00000033) 0 0 no-repeat, url('../images/montreal.jpg') 0 0 no-repeat;
+    background-size: cover;
+}
+.inscription__bouton{
+    display: flex;
+    padding: 0;
+    margin: 0 auto;
+    margin-top: auto;
+    margin-bottom: 15px;
+    width: 175px;
+    height: 55px;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, #000000, #222222);
+    color: #2277ee;
+    border-radius: 15px;
+    box-shadow: 0;
+    transition: box-shadow 200ms;
+}
+.inscription__bouton:hover{
+    box-shadow: 0 0 0 5px #0055aa;
+}
+.sujet__section{
+    min-height: 100vh;
+}
+.retour__bouton{
+    display: inline-block;
+    font-size: initial;
+}
+figure{
+    margin: 0;
+    padding: 0;
+}
+figure > img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.entete{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.centre{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+    background-color: #ffffff92;
+}
+.soustitre{
+    text-align: center;
+}
+
+body > div:nth-of-type(1){
+    background: linear-gradient(to right, #000000, #000000, #00000000) 0 0 no-repeat, url('../images/montreal.jpg') 0 0 no-repeat;
+    background-size: cover;
+    /* filter: blur(5px); */
+}
+body > div:nth-of-type(2){
+    background: linear-gradient(to right, #00000000, #000000, #000000) 0 0 no-repeat, url('../images/Voyager2.jpg') -675px no-repeat;
+    background-size: cover;
+}
+body > div:nth-of-type(3){
+    background: linear-gradient(to right, #000000, #000000, #00000000) 0 0 no-repeat, url('../images/night-vale-background.webp') right -750px bottom 0 no-repeat;
+    background-size: cover;
+}
+body > div:nth-of-type(4){
+    background: linear-gradient(to right, #00000000, #000000, #000000) 0 0 no-repeat, url('../images/montreal.jpg') 0 0 no-repeat;
+    background-size: cover;
+}
+body > div:nth-of-type(5){
+    background: linear-gradient(to right, #000000, #000000, #00000000) 0 0 no-repeat, url('../images/montreal.jpg') 0 0 no-repeat;
+    background-size: cover;
+}
+body > div:nth-of-type(6){
+    background: linear-gradient(to right, #00000000, #000000, #000000) 0 0 no-repeat, url('../images/montreal.jpg') 0 0 no-repeat;
+    background-size: cover;
+}
+body > div:nth-of-type(7){
+    background: linear-gradient(to top, #000000, #151515);
+    background-size: cover;
+}
+
+.formulaire{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    width: clamp(330px, calc(175.714px + 38.571vw), 600px);
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #00000030;
+}
+.formulaire__div{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding: 2px;
+}
+.formulaire__div:nth-of-type(even){
+    background-color: #00000022;
+}
+.formulaire__valider{
+    width: 50%;
+    margin: 0 auto;
+}

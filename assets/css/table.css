@@ -1,15 +1,15 @@
 table{
-    display: inline-table;
-    float: right;
-    position: relative;
-    border: 2px solid black;
-    width: clamp(360px, calc(165.714px + 48.571vw), 700px);
+    display: table;
+    border: 2px solid rgb(35, 0, 0);
+    background-color: red;
+    border-radius: 3px;
+    width: clamp(380px, calc(2.857px + 94.286vw), 1040px);
 }
 th,td{
     border: 1px solid gray;
     padding: 5px;
     margin: 0;
-    font-size: 1.5rem;
+    font-size: clamp(14px, calc(6px + 2vw), 26px);
 }
 th{
     text-align: center;
@@ -20,15 +20,38 @@ caption{
     font-size: 5rem;
 }
 thead{
-    background-color: rgb(34, 0, 34);
+    background-color: rgb(34, 0, 0);
     color: white;
 }
 tbody{
-    background-color: rgb(150, 0, 150);
+    background-color: rgb(180, 0, 0);
+}
+tr{
+    align-items: center;
+}
+.table__case-img{
+    max-width: clamp(85px, calc(-106.111px + 47.778vw), 300px);
+    padding: 0;
+    border: none;
+}
+.table__img{
+    display: block;
+    max-width: inherit;
+    margin: auto;
+}
+.table__lien{
+    padding: 5px 1px;
+}
+.table__lien > a{
+    color:rgb(37, 15, 181);
 }
 tfoot{
-    background-color: rgb(95, 0, 95);
+    background-color: rgb(95, 0, 0);
     color: white;
+    text-align: center;
+}
+tfoot > tr > td{
+    font-size: clamp(18px, calc(7.714px + 2.571vw), 36px);
 }
 tbody tr:nth-of-type(odd){
     background-color: #ffffff2b;

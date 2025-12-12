@@ -39,7 +39,7 @@ h3{
     font-size: 16px;
     line-height: 1em;
     font-weight: 400;
-    color: #00000088;
+    color: #000000aa;
     text-align: center;
 }
 .description{
@@ -48,7 +48,7 @@ h3{
     margin-top: 15px;
 }
 
-/* Inutilisé */
+/* Inutilisé
 .sujet__nav{
     display: flex;
     flex-direction: column;
@@ -95,12 +95,12 @@ h3{
 .sujet__cinq{
     background: linear-gradient(to left, #000000, #000000, #00000033) 0 0 no-repeat, url('../images/montreal.jpg') 0 0 no-repeat;
     background-size: cover;
-}
+} */
 .inscription__bouton{
     display: flex;
     padding: 0;
     margin: 0 auto;
-    margin-top: auto;
+    margin-top: 15px;
     margin-bottom: 15px;
     width: 175px;
     height: 55px;
@@ -118,6 +118,7 @@ h3{
 }
 .sujet__section{
     min-height: 100vh;
+    height: fit-content;
 }
 .retour__bouton{
     display: inline-block;
@@ -133,10 +134,10 @@ figure > img {
     object-fit: cover;
 }
 
-/* Les articles qui se trouvent sur la page s'accueil */
+/* Les articles qui se trouvent sur la page d'accueil */
 .sujet__article{
     width: 100%;
-    margin: 5px;
+    margin: 5px 0;
     padding: 10px 20px;
     font-size: 14px;
     background-color: rgba(255, 255, 255, 0.6);
@@ -150,47 +151,65 @@ figure > img {
 .article__h3{
     display: block;
     width: 100%;
-    margin: 0 0 7px 5px;
+    margin: 0 5px 7px;
     padding: 0;
-    font-size: 22px;
+    font-size: 26px;
+}
+.sujet__section > .sujet__article:nth-of-type(odd) > .article__div > .article__h3{
+    text-align: left;
+}
+.sujet__section > .sujet__article:nth-of-type(even) > .article__div > .article__h3{
+    text-align: right;
 }
 .article__p{
-    display: inline;
+    display: block;
     text-align: justify;
-    padding: 5px 0 8px 20px;
-    font-size: 115%;
+    padding: 5px 10px;
+    margin: 0;
+    font-size: clamp(15px, calc(12.143px + 0.714vw), 20px);
 }
-.article__fig{
-    display: inline-flex;
+.article__bouton{
+    display: flex;
     position: relative;
     margin: 5px 15px 15px 15px;
     padding: 0;
-    width: clamp(15.625rem, 3.125rem + 50vw, 31.25rem);
-    max-height: 300px;
+    width: fit-content;
+    height: fit-content;
     border-radius: 15px;
     box-shadow: none;
     transition: box-shadow 200ms;
 }
-.article__fig:hover{
+.article__fig{
+    display: flex;
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    color: #ffffff00;
+    border-radius: 15px;
+    transition: color 200ms;
+}
+.article__bouton:hover{
     box-shadow: 0 0 0 5px #0055aa;
+}
+.sujet__section > .sujet__article:nth-of-type(odd) > .article__div > .article__bouton{
+    float: right;
+}
+.sujet__section > .sujet__article:nth-of-type(even) > .article__div > .article__bouton{
+    float: left;
 }
 .article__img{
     display: flex;
-    width: 100%;
+    width: fit-content;
+    height: fit-content;
+    max-width: clamp(310px, calc(216.667px + 23.333vw), 450px);
+    max-height: 300px;
+    object-fit: contain;
     filter: none;
     border-radius: inherit;
     transition: filter 200ms;
 }
-.article__fig:hover > .article__img{
-    filter: brightness(0.2);
-}
-.article__bouton{
-    display: flex;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    color: #ffffff00;
-    transition: color 200ms;
+.article__bouton:hover > .article__fig > .article__img{
+    filter: blur(1.35px) brightness(0.25);
 }
 .article__figcaption{
     display: flex;
@@ -204,14 +223,8 @@ figure > img {
     font-size: 38px;
     color: inherit;
 }
-.article__bouton:hover{
+.article__bouton:hover > .article__fig > .article__figcaption{
     color: #ffffffff;
-}
-.sujet__section > .sujet__article:nth-of-type(odd) > .article__div > .article__fig{
-    float: right;
-}
-.sujet__section > .sujet__article:nth-of-type(even) > .article__div > .article__fig{
-    float: left;
 }
 
 .entete{
@@ -224,7 +237,7 @@ figure > img {
 .centre{
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 30px;
+    padding: 0 clamp(10px, calc(-7.778px + 4.444vw), 30px);
     background-color: #ffffff92;
 }
 .soustitre{
@@ -232,34 +245,56 @@ figure > img {
 }
 
 /* Le fond d'écrant de chaque section */
-body > div:nth-of-type(1){
-    background: linear-gradient(to right, #000000, #000000, #00000000) 0 0 no-repeat, url('../images/montreal.jpg') 0 0 no-repeat;
-    background-size: cover;
-    /* filter: blur(5px); */
+.background__accueil{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #000000, #333333) 0 0 no-repeat;
+    z-index: -5;
 }
-body > div:nth-of-type(2){
-    background: linear-gradient(to right, #00000000, #000000, #000000) 0 0 no-repeat, url('../images/Voyager2.jpg') -675px no-repeat;
-    background-size: cover;
+.background__img{
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+    height: 100%;
+    max-width: 100%;
+    filter: blur(3px);
+    z-index: -10;
 }
-body > div:nth-of-type(3){
-    background: linear-gradient(to right, #000000, #000000, #00000000) 0 0 no-repeat, url('../images/night-vale-background.webp') right -750px bottom 0 no-repeat;
-    background-size: cover;
+.img__impair{
+    right: 0;
 }
-body > div:nth-of-type(4){
-    background: linear-gradient(to right, #00000000, #000000, #000000) 0 0 no-repeat, url('../images/Queen-of-the-Night-Album.jpg') 0 0 no-repeat;
-    background-size: contain 100%;
+.img__pair{
+    left: 0;
 }
-body > div:nth-of-type(5){
-    background: linear-gradient(to right, #000000, #000000, #00000000) 0 0 no-repeat, url('../images/rdr2-background.png') 400px 0 no-repeat;
-    background-size: cover;
+.background__gradient{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
 }
-body > div:nth-of-type(6){
-    background: linear-gradient(to right, #00000000, #000000, #000000) 0 0 no-repeat, url('../images/montreal.jpg') 0 0 no-repeat;
-    background-size: cover;
+.gradient__impair{
+    background: linear-gradient(to left, #00000000, #000000, #000000) 0 0 no-repeat;
+    left: 0;
 }
-body > div:nth-of-type(7){
-    background: linear-gradient(to bottom, #000000, #151515);
-    background-size: cover;
+.gradient__pair{
+    background: linear-gradient(to right, #00000000, #000000, #000000) 0 0 no-repeat;
+    right: 0;
+}
+body > div{
+    position: relative;
+}
+.background__inscription{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #000000, #1e1e1e) 0 0 no-repeat;
+    z-index: -5;
 }
 
 .formulaire{

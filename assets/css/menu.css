@@ -11,6 +11,7 @@
     font-size: 2rem;
     background-color: rgba(0, 0, 0, 0.9);
     padding: 10px;
+    z-index: 1500;
 }
 .entete__nav a {
     text-decoration: none;
@@ -52,4 +53,5 @@
     right: 20px;
     top: 20px;
     background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1500;
 }

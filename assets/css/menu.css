@@ -55,3 +55,23 @@
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 1500;
 }
+
+.navigation__accueil{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+    z-index: 1500;
+    height: fit-content;
+    width: fit-content;
+    /* filter: drop-shadow(1px 1px 0.5px #ffffff)
+            drop-shadow(-1px 1px 0.5px #ffffff)
+            drop-shadow(1px -1px 0.5px #ffffff)
+            drop-shadow(-1px -1px 0.5px #ffffff); */
+    filter: drop-shadow(0 0 8px #000000);
+}
+.navigation__accueil:hover{
+    filter: brightness(0) saturate(100%) invert(23%) sepia(56%) saturate(6267%) hue-rotate(228deg) brightness(103%) contrast(101%) drop-shadow(0 0 8px #000000);
+}
